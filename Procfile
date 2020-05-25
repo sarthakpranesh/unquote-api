@@ -1,1 +1,1 @@
-web: denon start
+web: deno run --allow-env --allow-net --allow-read --allow-plugin --allow-write --unstable server.ts

@@ -16,14 +16,6 @@
         "MONGO_NAME": "readOnly",
         "MONGO_PASSWORD": "2BZeiRIqHvDmfgFT"
       }
-    },
-    "start": {
-      "cmd": "deno run server.ts",
-      "desc": "Production server!!!",
-      "env": {
-        "MONGO_NAME": "readOnly",
-        "MONGO_PASSWORD": "2BZeiRIqHvDmfgFT"
-      }
     }
   }
 }

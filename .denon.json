@@ -1,0 +1,29 @@
+{
+  "allow": {
+    "env": true,
+    "net": true,
+    "read": true,
+    "plugin": true,
+    "write": true
+  },
+  "unstable": true,
+  "scripts": {
+    "dev": {
+      "cmd": "deno run server.ts",
+      "desc": "Development server!!!",
+      "env": {
+        "PORT": "3000",
+        "MONGO_NAME": "readOnly",
+        "MONGO_PASSWORD": "2BZeiRIqHvDmfgFT"
+      }
+    },
+    "start": {
+      "cmd": "deno run server.ts",
+      "desc": "Production server!!!",
+      "env": {
+        "MONGO_NAME": "readOnly",
+        "MONGO_PASSWORD": "2BZeiRIqHvDmfgFT"
+      }
+    }
+  }
+}

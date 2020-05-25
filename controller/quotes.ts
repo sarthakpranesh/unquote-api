@@ -8,18 +8,18 @@ export const GetQuotesFromDb = async () => {
 
 export const getRandomQuote = async () => {
   let [randomSelect, q] = await Promise.all([
-    Math.floor(Math.random()),
+    Math.floor(Math.random() * 12017),
     GetQuotesFromDb(),
   ]);
-  return q[randomSelect*q.length];
+  return q[randomSelect];
 }
 
 export const getRandomQuoteList = async () => {
   let [randomSelect, q] = await Promise.all([
-    Math.floor(Math.random()),
+    Math.floor(Math.random() * 12017),
     GetQuotesFromDb(),
   ]);
-  return q.slice(randomSelect*q.length, randomSelect*q.length + 5);
+  return q.slice(randomSelect, randomSelect + 5);
 }
 
 export const getQuoteById = async (oid: string) => {

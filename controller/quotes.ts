@@ -15,11 +15,16 @@ export const getRandomQuote = async () => {
 }
 
 export const getRandomQuoteList = async () => {
+  const counter = Math.floor(12017 / 5);
   let [randomSelect, q] = await Promise.all([
-    Math.floor(Math.random() * 12017),
+    Math.floor(Math.random() * counter),
     GetQuotesFromDb(),
   ]);
-  return q.slice(randomSelect, randomSelect + 5);
+  let rq = []
+  for (let i = 0; i < 5; i++) {
+    rq.push(q[randomSelect + (counter * i)])
+  }
+  return rq;
 }
 
 export const getQuoteById = async (oid: string) => {
